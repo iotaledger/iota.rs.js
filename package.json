@@ -1,0 +1,51 @@
+{
+  "name": "@iotaledger/iota.rs",
+  "version": "0.1.2",
+  "description": "IOTA rust to javascript libraries",
+  "main": "lib/iota.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "prepublishOnly": "node_modules/babel-cli/bin/babel.js src --out-dir lib && cp src/iota-rs.js lib/iota-rs.js"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "ignore": [
+      "src/iota-rs.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iotaledger/iota.rs.js.git"
+  },
+  "keywords": [
+    "iota",
+    "rust",
+    "tangle"
+  ],
+  "contributors": [
+    {
+      "name": "Paul Handy",
+      "email": "paul.d.handy@gmail.com",
+      "url": "https://github.com/paulhandy/"
+    },
+    {
+      "name": "Andreas C. Osowski",
+      "email": "andreas@osowski.de",
+      "url": "https://github.com/th0br0"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/iotaledger/iota.rs.js/issues"
+  },
+  "homepage": "https://github.com/iotaledger/iota.rs.js#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-latest": "^6.24.1"
+  }
+}
